@@ -1,10 +1,14 @@
 import React from 'react';
 import '../css/style.css';
-import Perfil1 from '../assets/img/barked.svg';
-import Perfil2 from '../assets/img/meowed.svg';
+import Perfil1 from '../assets/img/meowed.svg';
+import Perfil2 from '../assets/img/barked.svg';
+import Perfil3 from '../assets/img/bad.vibes.memes.svg';
 import Post1 from '../assets/img/gato-telefone.svg';
 import Post2 from '../assets/img/dog.svg';
-import Curtido from '../assets/img/respondeai.svg';
+import Post3 from '../assets/img/bad.vibes.memes.svg';
+import Curtido1 from '../assets/img/respondeai.svg';
+import Curtido2 from '../assets/img/adorable_animals.svg';
+import Curtido3 from '../assets/img/9gag.svg';
 
 function Post(props) {
 
@@ -56,7 +60,7 @@ function Post(props) {
                     </div>
                 </div>
                 <div className="conteudo">
-                    <img src={props.post} alt="gato-telefone" data-teste="post-image" onClick={ClicarImagem}/>
+                    <img src={props.post} alt="gato-telefone" data-teste="post-image" onDoubleClick={ClicarImagem}/>
                 </div>
                 <div className="fundo">
                     <div className="acoes">
@@ -87,9 +91,9 @@ function Post(props) {
 
 export default function Posts(){
     const post = [
-        {nome: "meowed",  picture: Perfil2, post: Post1, curtidopicture: Curtido, curtidonome: "respondeai", num: 200},
-        {nome: "barked",  picture: Perfil1, post: Post2, curtidopicture: Curtido, curtidonome: "respondeai", num: 20},
-        {nome: "barked",  picture: Perfil2, post: Post1, curtidopicture: Curtido, curtidonome: "respondeai", num: 500},
+        {nome: "meowed",  picture: Perfil1, post: Post1, curtidopicture: Curtido1, curtidonome: "respondeai", num: 200},
+        {nome: "barked",  picture: Perfil2, post: Post2, curtidopicture: Curtido2, curtidonome: "adorable_animals", num: 528},
+        {nome: "bad.vibes.memes",  picture: Perfil3, post: Post3, curtidopicture: Curtido3, curtidonome: "9gag", num: 104},
     ];
     
     return(

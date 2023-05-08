@@ -1,17 +1,22 @@
 import React from 'react';
 import '../css/style.css'
-import Perfil from '../assets/img/meowed.svg';
+import Perfil1 from '../assets/img/bad.vibes.memes.svg';
+import Perfil2 from '../assets/img/chibirdart.svg';
+import Perfil3 from '../assets/img/razoesparaacreditar.svg';
+import Perfil4 from '../assets/img/adorable_animals.svg';
+import Perfil5 from '../assets/img/smallcutecats.svg';
+
 
 export default function Sidebar() {
     const [imgProfile, setImgProfile] = React.useState("https://mpmp.pt/wp-content/uploads/2014/07/An%C3%B3nimo-300x283.png");
     const [nameProfile, setNameProfile] = React.useState("Anônimo");
 
     const sidebars = [
-        { nome: "meowed", picture: Perfil, },
-        { nome: "meowed", picture: Perfil, },
-        { nome: "meowed", picture: Perfil, },
-        { nome: "meowed", picture: Perfil, },
-        { nome: "meowed", picture: Perfil, },
+        { nome: "bad.vibes.memes", picture: Perfil1, },
+        { nome: "chibidart", picture: Perfil2, },
+        { nome: "razoesparaacreditar", picture: Perfil3, },
+        { nome: "adorable_animals", picture: Perfil4, },
+        { nome: "smallcutecats", picture: Perfil5, },
     ];
 
     function updatePhoto() {
@@ -81,7 +86,7 @@ function TodasSugestoes(props) {
         <>
             <div className="sugestao">
                 <div className="usuario">
-                    <img src={props.profile} alt="bad.vibes.memes.svg" />
+                    <img src={props.profile} alt="profile" />
                     <div className="texto">
                         <div className="nome">{props.nome}</div>
                         <div className="razao">Segue você</div>
