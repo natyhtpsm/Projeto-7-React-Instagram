@@ -27,11 +27,11 @@ export default function Sidebar() {
     return (
         <div className="sidebar">
             <div className="usuario">
-                <img src={imgProfile} alt="imagem de perfil" onClick={updatePhoto} />
+                <img data-teste="profile-image" src={imgProfile} alt="imagem de perfil" onClick={updatePhoto} />
                 <div className="texto">
                     <span>
-                        <strong>{nameProfile}</strong>
-                        <ion-icon name="pencil" onClick={updateName}></ion-icon>
+                        <strong data-test="name">{nameProfile}</strong>
+                        <ion-icon name="pencil" data-test="edit-name" onClick={updateName}></ion-icon>
                     </span>
                 </div>
             </div>

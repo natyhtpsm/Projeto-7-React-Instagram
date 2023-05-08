@@ -45,7 +45,7 @@ function Post(props) {
 
     return (
         <div className="posts">
-            <div className="post">
+            <div className="post" data-test="post">
                 <div className="topo">
                     <div className="usuario">
                         <img src={props.picture} alt="meowed" />
@@ -56,27 +56,27 @@ function Post(props) {
                     </div>
                 </div>
                 <div className="conteudo">
-                    <img src={props.post} alt="gato-telefone" onClick={ClicarImagem}/>
+                    <img src={props.post} alt="gato-telefone" data-teste="post-image" onClick={ClicarImagem}/>
                 </div>
                 <div className="fundo">
                     <div className="acoes">
                         <div>
                             { taCurtido ? 
-                            <ion-icon name="heart" onClick={CurtirPost} style={{color:'red'}}></ion-icon> : 
+                            <ion-icon name="heart" data-test="like-post" onClick={CurtirPost} style={{color:'red'}}></ion-icon> : 
                             <ion-icon name="heart-outline" onClick={CurtirPost} style={{color: 'black'}}></ion-icon>
                             }
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
                         </div>
                         <div>
-                            <ion-icon name={ taSalvo ? "bookmark" : "bookmark-outline"} onClick={SalvarPost}></ion-icon>
+                            <ion-icon name={ taSalvo ? "bookmark" : "bookmark-outline"} data-test="save-post" onClick={SalvarPost}></ion-icon>
                         </div>
                     </div>
 
                     <div className="curtidas">
                         <img src={props.curtidopicture} alt="respondeai" />
                         <div className="texto">
-                            Curtido por <strong>{ voceCurtiu ? "você": QuemCurtiu }</strong> e <strong>outras {numCurtidas} pessoas</strong>
+                            Curtido por <strong>{ voceCurtiu ? "você": QuemCurtiu }</strong> e <strong>outras </strong><strong data-test="likes-number">{numCurtidas}</strong> <strong>pessoas</strong>
                         </div>
                     </div>
                 </div>
