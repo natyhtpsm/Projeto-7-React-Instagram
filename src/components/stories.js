@@ -7,7 +7,7 @@ import Story4 from '../assets/img/nathanwpylestrangeplanet.svg';
 import Story5 from '../assets/img/wawawicomics.svg';
 import Story6 from '../assets/img/respondeai.svg';
 import Story7 from '../assets/img/filomoderna.svg';
-import Story8 from '../assets/img/memeriagourmet.svg';
+import Story8 from '../assets/img/vegans.png';
 
 
 function RenderStories(props) {
@@ -38,6 +38,10 @@ export default function Stories() {
     return (
         <>
             <div className="stories">
+                <div class="setinha">
+                    <ion-icon name="chevron-forward-circle"></ion-icon>
+                </div>
+
                 {story.map(i => <RenderStories picture={i.picture} nome={i.nome} />)}
             </div>
         </>

@@ -1,4 +1,5 @@
 import '../css/style.css'
+import Logo from '../assets/img/logo.png'
 
 export default function Navbar() {
     return (
@@ -7,7 +8,7 @@ export default function Navbar() {
                 <div className="logo">
                     <ion-icon name="logo-instagram"></ion-icon>
                     <div className="separador"></div>
-                    <img src="assets/img/logo.png" alt="logo" />
+                    <img src={Logo} alt="logo" />
                 </div>
 
                 <div className="pesquisa">

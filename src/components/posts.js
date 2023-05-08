@@ -60,7 +60,7 @@ function Post(props) {
                     </div>
                 </div>
                 <div className="conteudo">
-                    <img src={props.post} alt="gato-telefone" data-teste="post-image" onDoubleClick={ClicarImagem}/>
+                    <img src={props.post} alt="gato-telefone" data-teste="post-image" onClick={ClicarImagem}/>
                 </div>
                 <div className="fundo">
                     <div className="acoes">

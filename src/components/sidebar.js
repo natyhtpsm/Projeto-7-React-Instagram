@@ -86,7 +86,7 @@ function TodasSugestoes(props) {
         <>
             <div className="sugestao">
                 <div className="usuario">
-                    <img src={props.profile} alt="profile" />
+                    <img src={props.picture} alt="profile" />
                     <div className="texto">
                         <div className="nome">{props.nome}</div>
                         <div className="razao">Segue você</div>
