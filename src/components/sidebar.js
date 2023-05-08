@@ -16,12 +16,22 @@ export default function Sidebar() {
 
     function updatePhoto() {
         const photo = window.prompt('Insira uma nova foto');
-        setImgProfile(photo);
+        if (photo == "" || photo.lenght == 0){
+            setImgProfile(imgProfile);
+        } else{
+            setImgProfile(photo);     
+        };
+
     }
 
     function updateName() {
         const name = window.prompt('Digite seu nome de usuário');
+        if (name == "" || name.length == 0){
+            setNameProfile(nameProfile);
+        }
+        else{
         setNameProfile(name);
+        };
     }
 
     return (
@@ -38,19 +48,19 @@ export default function Sidebar() {
 
             <div className="sugestoes">
                 <div className="titulo">
-                    SugestÃµes para vocÃª
+                    Sugestões para você
                     <div>Ver tudo</div>
                 </div>
                 {sidebars.map(i => <TodasSugestoes picture={i.picture} nome={i.nome} />)}
             </div>
 
             <div className="links">
-                Sobre â€¢ Ajuda â€¢ Imprensa â€¢ API â€¢ Carreiras â€¢ Privacidade â€¢ Termos â€¢ LocalizaÃ§Ãµes â€¢ Contas mais relevantes â€¢
-                Hashtags â€¢ Idioma
+                Sobre | Ajuda | Imprensa | API | Carreiras | Privacidade | Termos | Localizações | Contas mais relevantes |
+                Hashtags | Idioma
             </div>
 
             <div className="copyright">
-                Â© 2021 INSTAGRAM DO FACEBOOK
+                © 2023 INSTAGRAM DO META
             </div>
         </div>
     );
@@ -74,7 +84,7 @@ function TodasSugestoes(props) {
                     <img src={props.profile} alt="bad.vibes.memes.svg" />
                     <div className="texto">
                         <div className="nome">{props.nome}</div>
-                        <div className="razao">Segue vocÃª</div>
+                        <div className="razao">Segue você</div>
                     </div>
                 </div>
                 <div className="seguir" onClick={Seguir}>{ seguindo? "Parar de seguir" : "Seguir"}</div>
