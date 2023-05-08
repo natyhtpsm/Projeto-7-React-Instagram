@@ -63,7 +63,7 @@ function Post(props) {
                         <div>
                             { taCurtido ? 
                             <ion-icon name="heart" data-test="like-post" onClick={CurtirPost} style={{color:'red'}}></ion-icon> : 
-                            <ion-icon name="heart-outline" onClick={CurtirPost} style={{color: 'black'}}></ion-icon>
+                            <ion-icon name="heart-outline" data-test="like-post" onClick={CurtirPost} style={{color: 'black'}}></ion-icon>
                             }
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
